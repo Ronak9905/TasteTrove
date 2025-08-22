@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #faf8f5;
+    color: #3b2f2f;
+}
+
+/*-----------------------------------*/
+/* Navbar Styles */
+/*-----------------------------------*/
+
+.navbar {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background: #ff6f61;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 6cqmax;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    background: #ffe5d9;
+    color: #e67e22;
+}
+
+/*-----------------------------------*/
+/* Chef Special Section Styles */
+/*-----------------------------------*/
+
+.chef-special-page {
+    padding: 52px 0 56px 0;
+    text-align: center;
+}
+
+.chef-special-page h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff7e6e;
+    text-shadow: 0 0 5px #ff7e6e, 0 0 10px #ff7e6e; /* Subtle glow effect */
+    margin-bottom: 36px;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+.chef-special-page h1:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffb347 0%, #ff6f61 100%);
+    transition: width 0.3s ease-in-out;
+    margin: 10px auto 0;
+}
+
+.chef-special-page h1:hover:after {
+    width: 100px;
+}
+
+/* Chef Card Grid */
+.chef-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 18px 0 80px 0;
+}
+
+.chef-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 18px 24px 14px 24px;
+    box-shadow: 0 6px 32px rgba(255, 126, 110, 0.1);
+    width: 240px;
+    cursor: pointer;
+    transition: transform 0.16s, box-shadow 0.16s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chef-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 16px 48px rgba(255, 126, 110, 0.2);
+}
+
+.chef-card img {
+    width: 180px;
+    height: 116px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 14px;
+}
+
+.chef-card h3 {
+    font-size: 1.18rem;
+    color: #ff7e6e;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/*-----------------------------------*/
+/* Recipes Grid & Cards */
+/*-----------------------------------*/
+
+.recipes-page {
+    padding: 52px 0 56px 0;
+    text-align: center;
+}
+
+.recipes-page h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff7e6e;
+    text-shadow: 0 0 5px #ff7e6e, 0 0 10px #ff7e6e; /* Subtle glow effect */
+    margin-bottom: 36px;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+.recipes-page h1:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffb347 0%, #ff6f61 100%);
+    transition: width 0.3s ease-in-out;
+    margin: 10px auto 0;
+}
+
+.recipes-page h1:hover:after {
+    width: 100px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center;
+    gap: 40px 42px;
+    margin: 18px 0 80px 0;
+    padding: 0 20px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 18px 24px 14px 24px;
+    box-shadow: 0 6px 32px rgba(255, 126, 110, 0.1);
+    cursor: pointer;
+    transition: transform 0.16s, box-shadow 0.16s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.recipe-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 16px 48px rgba(255, 126, 110, 0.2);
+}
+
+.recipe-card img {
+    width: 180px;
+    height: 116px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 14px;
+}
+
+.recipe-card h3 {
+    font-size: 1.18rem;
+    color: #ff7e6e;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/*-----------------------------------*/
+/* Modal Styles */
+/*-----------------------------------*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(52, 20, 19, 0.24);
+    
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 16px;
+    margin: 40px auto;
+    padding: 36px 32px;
+    box-shadow: 0 12px 60px rgba(38, 38, 38, 0.25);
+    max-width: 420px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 14px;
+    right: 22px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7e6e;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 16px;
+    color: #ff7e6e;
+}
+
+.modal-img {
+    width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 24px;
+}
+
+.modal-content h3 {
+    margin: 13px 0 7px 0;
+    color: #3b2f2f;
+    font-size: 1.13rem;
+    font-weight: 600;
+}
+
+#modalIngredients,
+#modalRecipe {
+    margin-left: 16px;
+    margin-bottom: 17px;
+}
+
+/*-----------------------------------*/
+/* Footer */
+/*-----------------------------------*/
+
+footer {
+    background: #ff7e6e;
+    color: #fff;
+    text-align: center;
+    padding: 26px 0 24px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/*-----------------------------------*/
+/* Responsive Styles */
+/*-----------------------------------*/
+
+@media (max-width: 900px) {
+    .chef-card-grid, .recipe-grid {
+        gap: 28px;
+    }
+
+    .nav-links {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 18px 10px;
+        gap: 8px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .chef-card, .recipe-card {
+        width: 90vw;
+        padding: 12px 8vw;
+    }
+
+    .chef-special-page, .recipes-page {
+        padding: 30px 0;
+    }
+
+    .chef-special-page h1, .recipes-page h1 {
+        font-size: 2rem;
+    }
+
+    .chef-card img, .recipe-card img {
+        width: 80vw;
+        height: 120px;
+    }
+
+    .modal-content {
+        max-width: 98vw;
+        padding: 20px 10vw;
+    }
+}
+
+/*-----------------------------------*/
+/* Animations */
+/*-----------------------------------*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
