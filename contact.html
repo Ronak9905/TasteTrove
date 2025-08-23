@@ -22,12 +22,21 @@
 
   <section class="contact-page">
     <h1>Contact Us</h1>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <form action="https://api.web3forms.com/submit" method="POST">
+  <!-- Required Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="195eead4-1af3-429a-9d48-a613ce9e7596">
+
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
   </section>
 
   <footer>

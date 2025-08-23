@@ -3,67 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TasteTrove</title>
+    <title>TasteTrove - All Recipes</title>
     <link rel="stylesheet" href="recipe.css">
 </head>
 <body>
+    <!-- ✅ Navbar -->
     <nav class="navbar">
         <div class="logo">
             <img src="Images/Main logo.png" alt="TasteTrove Logo">
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">All Recipes</a></li>
+            <li><a href="recipes.html" class="active">All Recipes</a></li>
             <li><a href="chef-special.html">Chef Special</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
+    <!-- ✅ Search & Filter Section -->
     <section class="recipe-filter-section">
         <form class="recipe-filter-form">
             <div class="form-row">
+                <!-- Veg / Non-Veg -->
                 <div class="btn-group">
-                    <button type="button" class="veg-btn" aria-pressed="false">
+                    <button type="button" class="veg-btn">
                         <span style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#008000;margin-right:7px;vertical-align:middle;border:2px solid #008000;"></span>
                         Veg
                     </button>
-                    <button type="button" class="nonveg-btn" aria-pressed="false">
+                    <button type="button" class="nonveg-btn">
                         <span style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#d32f2f;margin-right:7px;vertical-align:middle;border:2px solid #d32f2f;"></span>
                         Non-Veg
                     </button>
                 </div>
+
+                <!-- Meal Type Dropdown -->
                 <div class="select-group">
                     <label for="meal-type">Meal Type:</label>
-                    <select class="meal-type-select" name="meal-type" id="meal-type">
+                    <select class="meal-type-select" id="meal-type">
                         <option value="">Select Meal Type</option>
                         <option value="breakfast">Breakfast</option>
                         <option value="lunch">Lunch</option>
                         <option value="dinner">Dinner</option>
                     </select>
                 </div>
+
+                <!-- Search Bar -->
                 <div class="search-group">
                     <label for="search-bar">Dish Name:</label>
-                    <input type="text" class="search-bar" id="search-bar" placeholder="Search for a dish...">
+                    <!-- ✅ keep the id="search-bar" (this is what JS uses) -->
+                    <input type="text" id="search-bar" placeholder="Search for a dish...">
                 </div>
+
                 <button type="submit" class="search-btn">Search</button>
             </div>
         </form>
     </section>
 
+    <!-- ✅ Results Section -->
     <section id="recipe-results"></section>
-    
-    <div id="recipe-popup" class="popup-container">
+
+    <!-- ✅ Popup for Recipe Details -->
+    <div id="recipe-popup" class="popup-container" style="display:none;">
         <div class="popup-content">
             <button id="close-popup" class="close-btn">&times;</button>
-            <div id="popup-details">
-                </div>
+            <div id="popup-details"></div>
         </div>
     </div>
 
+    <!-- ✅ Footer -->
     <footer>
         <p>&copy; 2025 TasteTrove. All Rights Reserved.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- ✅ Scripts -->
     <script src="recipe.js"></script>
 </body>
 </html>
