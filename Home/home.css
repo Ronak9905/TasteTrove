@@ -81,14 +81,14 @@ body {
   gap:2rem;  /* equal spacing between h1, p, and button */
 }
 
-.hero-content h1 {
+/* .hero-content h1 {
    font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(90deg, #ff6f61, #ff9a8b);
-  -webkit-background-clip: text;
+  color: white;
   -webkit-text-fill-color: transparent;
   position: relative;
-} 
+}  */
 
 .hero-content h1::after {
   content: "";

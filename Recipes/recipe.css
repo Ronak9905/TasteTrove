@@ -247,7 +247,9 @@ body {
     font-size: 1.05rem;
 }
 
-.search-btn {
+.search-btn,
+.view-recipe-btn
+{
     width: 100%;
     margin-left: 0;
     margin-top: 1.2rem;
@@ -383,13 +385,16 @@ footer p {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0; /* make sure it covers whole screen */
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999 !important; /* force highest priority */
 }
+
 
 .popup-content {
     background: #fff;
@@ -415,6 +420,22 @@ footer p {
     border: none;
     cursor: pointer;
 }
+
+.form-row select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-row select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
 
 #popup-details h2 {
     font-size: 2em;

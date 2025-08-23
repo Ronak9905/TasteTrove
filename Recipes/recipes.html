@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TasteTrove - All Recipes</title>
     <link rel="stylesheet" href="recipe.css">
 </head>
+
 <body>
     <!-- ✅ Navbar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="Images/Main logo.png" alt="TasteTrove Logo">
+            <img src="../Images//Main_logo.png" alt="TasteTrove Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html" class="active">All Recipes</a></li>
-            <li><a href="chef-special.html">Chef Special</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Recipes//recipes.html" class="active">All Recipes</a></li>
+            <li><a href="../ChefSpecial//chef-special.html">Chef Special</a></li>
+            <li><a href="../Contact/contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -27,11 +29,13 @@
                 <!-- Veg / Non-Veg -->
                 <div class="btn-group">
                     <button type="button" class="veg-btn">
-                        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#008000;margin-right:7px;vertical-align:middle;border:2px solid #008000;"></span>
+                        <span
+                            style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#008000;margin-right:7px;vertical-align:middle;border:2px solid #008000;"></span>
                         Veg
                     </button>
                     <button type="button" class="nonveg-btn">
-                        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#d32f2f;margin-right:7px;vertical-align:middle;border:2px solid #d32f2f;"></span>
+                        <span
+                            style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#d32f2f;margin-right:7px;vertical-align:middle;border:2px solid #d32f2f;"></span>
                         Non-Veg
                     </button>
                 </div>
@@ -47,12 +51,15 @@
                     </select>
                 </div>
 
-                <!-- Search Bar -->
+                <!-- Search Dropdown -->
                 <div class="search-group">
                     <label for="search-bar">Dish Name:</label>
-                    <!-- ✅ keep the id="search-bar" (this is what JS uses) -->
-                    <input type="text" id="search-bar" placeholder="Search for a dish...">
+                    <select id="search-bar">
+                        <option value="">-- Select a dish --</option>
+                        <!-- JS will add options here dynamically -->
+                    </select>
                 </div>
+
 
                 <button type="submit" class="search-btn">Search</button>
             </div>
@@ -62,7 +69,14 @@
     <!-- ✅ Results Section -->
     <section id="recipe-results"></section>
 
-    <!-- ✅ Popup for Recipe Details -->
+   
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 TasteTrove. All Rights Reserved.</p>
+    </footer>
+
+     <!-- ✅ Popup for Recipe Details -->
     <div id="recipe-popup" class="popup-container" style="display:none;">
         <div class="popup-content">
             <button id="close-popup" class="close-btn">&times;</button>
@@ -70,12 +84,8 @@
         </div>
     </div>
 
-    <!-- ✅ Footer -->
-    <footer>
-        <p>&copy; 2025 TasteTrove. All Rights Reserved.</p>
-    </footer>
-
     <!-- ✅ Scripts -->
     <script src="recipe.js"></script>
 </body>
+
 </html>
