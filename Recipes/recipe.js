@@ -92,19 +92,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Populate dropdown with dishes A–Z
     async function populateDropdown() {
         const letters = "abcdefghijklmnopqrstuvwxyz".split("");
+        const addedMeals = new Set(); // prevent duplicates
+
         for (const letter of letters) {
             try {
-               const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian');
+                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
                 const data = await response.json();
+
                 if (data.meals) {
                     data.meals.forEach(meal => {
-                        const option = document.createElement("option");
-                        option.value = meal.idMeal;
-                        option.textContent = meal.strMeal;
-                        searchBar.appendChild(option);
+                        if (!addedMeals.has(meal.idMeal)) {
+                            addedMeals.add(meal.idMeal);
+                            const option = document.createElement("option");
+                            option.value = meal.idMeal;
+                            option.textContent = meal.strMeal;
+                            searchBar.appendChild(option);
+                        }
                     });
                 }
             } catch (err) {
@@ -112,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+
 
     populateDropdown();
 });
