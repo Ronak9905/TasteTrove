@@ -3,7 +3,7 @@
 const RECIPES = [
   {
     title: "Rice Kheer",
-    image: "Images/Kheer.jpeg",
+    image: "../Images/Kheer.jpeg",
     ingredients: [
       "Basmati rice – 1/2 cup (soaked 30 min)",
       "Full-cream milk – 1 litre",
@@ -25,7 +25,7 @@ const RECIPES = [
   },
   {
     title: "Paneer Butter Masala",
-    image: "Images/Paneer butter.jpg",
+    image: "../Images/Paneer butter.jpg",
     ingredients: [
       "Paneer – 250 g, 1-inch cubes",
       "Butter – 2 tbsp + 1 tsp",
@@ -52,7 +52,7 @@ const RECIPES = [
   },
   {
     title: "Chocolate Brownie",
-    image: "Images/Chocolate brownie.jpg",
+    image: "../Images/Chocolate brownie.jpg",
     ingredients: [
       "Dark chocolate – 170 g (55–70% cocoa)",
       "Unsalted butter – 115 g",
@@ -75,7 +75,7 @@ const RECIPES = [
   },
   {
     title: "Vegetable Biryani",
-    image: "Images/Vegetable biryani.jpg",
+    image: "../Images/Vegetable biryani.jpg",
     ingredients: [
       "Basmati rice – 2 cups (soaked 30 min)",
       "Mixed vegetables (carrot, beans, peas, cauliflower) – 2 cups",
@@ -103,7 +103,7 @@ const RECIPES = [
   },
   {
     title: "Gulab Jamun",
-    image: "Images/Gulab-Jamun.jpg",
+    image: "../Images/Gulab-Jamun.jpg",
     ingredients: [
       "Khoya (mawa) – 1 cup (crumbled, room temp)",
       "Maida – 2 tbsp",
@@ -126,7 +126,7 @@ const RECIPES = [
   },
   {
     title: "Rasmalai",
-    image: "Images/Rasmalai.jpeg",
+    image: "../Images/Rasmalai.jpeg",
     ingredients: [
       "Rasgullas – 12 (store-bought or homemade)",
       "Full-cream milk – 1.2 litres",
@@ -144,7 +144,7 @@ const RECIPES = [
   },
   {
     title: "Falooda",
-    image: "Images/Falooda.jpeg",
+    image: "../Images/Falooda.jpeg",
     ingredients: [
       "Falooda sev – 1/2 cup (cooked & cooled)",
       "Basil seeds (sabja) – 1 tbsp (soaked 20–30 min)",
@@ -163,7 +163,7 @@ const RECIPES = [
   },
   {
     title: "Dhokla",
-    image: "Images/Dhokla.jpeg",
+    image: "../Images/Dhokla.jpeg",
     ingredients: [
       "Besan (gram flour) – 1 cup",
       "Rava (semolina) – 1 tbsp",
@@ -186,7 +186,7 @@ const RECIPES = [
   },
   {
     title: "Malai Kofta",
-    image: "Images/malai kofta.jpg",
+    image: "../Images/malai kofta.jpg",
     ingredients: [
       "Kofta: Paneer 150 g (grated), boiled potato 2 medium (mashed), cornflour 2 tbsp, chopped nuts & raisins 2 tbsp, salt & pepper",
       "Gravy: onions 2 (sliced), tomatoes 3 (chopped), ginger-garlic paste 1 tbsp, cashews 12 (soaked), chilli powder 1 tsp, turmeric 1/4 tsp, coriander powder 1 tsp, garam masala 1/2 tsp, kasuri methi 1 tsp, cream 1/3 cup, sugar 1 tsp, salt",
@@ -201,7 +201,7 @@ const RECIPES = [
   },
   {
     title: "Pav Bhaji",
-    image: "Images/pav bhaji.jpeg",
+    image: "../Images/pav bhaji.jpeg",
     ingredients: [
       "Pav – 8, Butter – 3–4 tbsp (for bhaji & toasting)",
       "Potatoes – 3 medium (boiled & mashed)",
@@ -223,7 +223,7 @@ const RECIPES = [
   },
   {
     title: "Rajma Chawal",
-    image: "Images/rajma chawal.webp",
+    image: "../Images/rajma chawal.webp",
     ingredients: [
       "Kashmiri rajma – 1 cup (soaked overnight)",
       "Onions – 2 medium (finely chopped)",
@@ -244,7 +244,7 @@ const RECIPES = [
   },
   {
     title: "Idli Sambar",
-    image: "Images/idli sambhar.jpg",
+    image: "../Images/idli sambhar.jpg",
     ingredients: [
       "Ready idli batter – 2 cups",
       "Toor dal – 3/4 cup",
@@ -264,7 +264,7 @@ const RECIPES = [
   },
   {
     title: "Chole Bhature",
-    image: "Images/chole bhature.jpeg",
+    image: "../Images/chole bhature.jpeg",
     ingredients: [
       "Chickpeas – 1.5 cups (soaked overnight)",
       "Onions – 2 (finely chopped), Tomatoes – 3 (pureed)",
@@ -285,7 +285,7 @@ const RECIPES = [
   },
   {
     title: "Aloo Paratha",
-    image: "Images/Aloo paratha.cms",
+    image: "../Images/Aloo paratha.cms",
     ingredients: [
       "Dough: whole wheat flour 2 cups, salt 1/2 tsp, oil 1 tsp, water as needed",
       "Filling: boiled potatoes 3 medium (grated), green chilli 1–2 (finely chopped), ginger 1/2 tsp (grated), coriander 2 tbsp, amchur 1/2 tsp, garam masala 1/2 tsp, chilli powder 1/2 tsp, salt",
@@ -302,7 +302,7 @@ const RECIPES = [
   },
   {
     title: "Matar Paneer",
-    image: "Images/matar paneer.webp",
+    image: "../Images/matar paneer.webp",
     ingredients: [
       "Paneer – 250 g (cubes)",
       "Green peas – 1 cup (fresh/frozen)",
@@ -323,7 +323,7 @@ const RECIPES = [
   },
   {
     title: "Kofta Curry",
-    image: "Images/Kofta curry.jpg",
+    image: "../Images/Kofta curry.jpg",
     ingredients: [
       "Kofta: boiled potatoes 2, grated paneer 100 g, grated carrot 1/4 cup, green chilli 1, cornflour 2–3 tbsp, salt & pepper",
       "Gravy: onion 2 (sliced), tomato 3 (pureed), ginger-garlic 1 tbsp, yoghurt 1/4 cup (whisked), chilli powder 1 tsp, turmeric 1/4 tsp, coriander powder 1 tsp, cumin powder 1/2 tsp, garam masala 1/2 tsp, kasuri methi 1 tsp",
